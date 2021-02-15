@@ -6,34 +6,50 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <Button
-            android:id="@+id/image_select"
-            android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Select Image"
-            android:layout_weight="1"
-            android:layout_gravity="top|center_horizontal"/>
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/pattern_select"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Select Pattern"
-            android:layout_weight="1"
-            android:layout_gravity="center_vertical|center_horizontal"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:gravity="center_horizontal">
 
-        <Button
-            android:id="@+id/proceed"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Generate Results"
-            android:layout_weight="1"
-            android:layout_gravity="bottom|center_horizontal"/>
-    </LinearLayout>
+                <Button
+                    android:id="@+id/image_select"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_margin="25dp"
+                    android:layout_gravity="center"
+                    android:text="Select Image" />
+
+                <Button
+                    android:id="@+id/pattern_select"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_margin="25dp"
+                    android:layout_gravity="center"
+                    android:text="Select Pattern" />
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/proceed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Generate Results"
+                android:padding="20dp"
+                android:layout_gravity="bottom|center_horizontal"/>
+
+
+        </LinearLayout>
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

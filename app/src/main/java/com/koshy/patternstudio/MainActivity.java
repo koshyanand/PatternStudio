@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
     public static final int IMAGE_REQ_CODE = 121;
     public static final int PATTERN_REQ_CODE = 122;
     public static final String TAG = MainActivity.class.getSimpleName();
+    public static final String IMAGE_EXTRA = "image";
+    public static final String PATTERN_EXTRA = "pattern";
     String imagePath = null;
     String patternPath = null;
     Button imageButton;
@@ -56,8 +58,8 @@ public class MainActivity extends AppCompatActivity {
                 return;
             }
             Intent intent = new Intent(MainActivity.this, ImageViewActivity.class);
-            intent.putExtra("image", imagePath);
-            intent.putExtra("pattern", patternPath);
+            intent.putExtra(IMAGE_EXTRA, imagePath);
+            intent.putExtra(PATTERN_EXTRA, patternPath);
             startActivity(intent);
         });
 
